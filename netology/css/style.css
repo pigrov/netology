@@ -1,12 +1,12 @@
 @font-face {
     font-family: OpenSans;
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+    src: url("../fonts/OpenSans-Regular.woff");
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
     font-family: OpenSans;
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+    src: url("../fonts/OpenSans-Bold.woff");
     font-weight: 600;
     font-style: normal;
   }
@@ -42,7 +42,7 @@
   /*************  header **************/
   
   .welcome {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+    background-image: url("../img/banner-bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -282,7 +282,7 @@
     width: 48px;
     height: 48px;
     background-color: #b59f5b;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20px;
@@ -405,19 +405,19 @@
   }
   
   .network.pt {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
+    background-image: url(../svg/001-pinterest.svg);
   }
   .network.fb {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg);
+    background-image: url(../svg/002-facebook-logo.svg);
   }
   .network.tm {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+    background-image: url(../svg/003-tumblr.svg);
   }
   .network.tw {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg);
+    background-image: url(../svg/004-twitter.svg);
   }
   .network.in {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg);
+    background-image: url(../svg/005-instagram.svg);
   }
   
   .copyright {
