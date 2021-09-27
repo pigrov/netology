@@ -109,8 +109,7 @@ body {
 
 /************* trands **************/
 
-
-.trands-head {
+.trands-head, .offers-head {
   color: #0f0d0e;
   font-size: 20px;
   font-weight: 600;
@@ -120,7 +119,7 @@ body {
   position: relative;
   text-align: center;  
 }
-.trands-head::after {
+.trands-head::after, .offers-head::after {
   content: "";
   width: 64px;
   height: 3px;
@@ -199,6 +198,74 @@ ul.trand-tags {
   margin-right: 20px;
   text-decoration: none; 
 }
+
+/*************  offers **************/
+
+.offers {
+  display: flex;
+  gap: 60px;
+}
+.offer {
+  position: relative;
+  min-height: 320px;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.offer-img {
+  text-align: center;  
+}
+.offer-box {
+  border: 3px solid #b59f5b;
+  margin-top: -30px;
+  padding: 46px 22px;
+  height: 100%;
+}
+.offer-name {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;  
+}
+.offer-text {
+  font-size: 14px;
+  color: #000;  
+}
+.offer-text a {
+  color: #b59f5b;
+  text-decoration: none;
+}
+.offer-footer {
+  min-height: 44px;
+  margin-top: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.offer-footer-price-old {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #000;
+  min-height: 18px;
+
+}
+.offer-footer-price-new {
+  font-size: 18px;
+  color: #000;  
+  font-weight: 600;
+}
+.offer-footer-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #b59f5b;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
 
 /*************  left side **************/
 
@@ -473,6 +540,11 @@ aside {
   vertical-align: super;
 }
 
+/*************  footer **************/
+
+.footer {
+ margin-top: 66px; 
+}
 .networks {
   width: 100%;
   padding: 28px;
