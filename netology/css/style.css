@@ -11,6 +11,9 @@
   font-style: normal;
 }
 
+
+
+
 body {
   margin: 0;
   font-family: OpenSans;
@@ -31,12 +34,21 @@ body {
   display: block;
   position: relative;
   box-sizing: border-box;
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   color: #fff;
+}
+
+
+
+@media (min-width: 767px) and (max-width: 1199px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;  
+  }
 }
 
 /*************  header **************/
@@ -65,7 +77,7 @@ body {
   display: block;
   font-size: 45px;
   text-transform: uppercase;
-  width: 700px;
+  max-width: 700px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -107,6 +119,67 @@ body {
   font-size: 0;
 }
 
+@media (max-width: 767px) {
+  nav {
+    display: none;
+  }
+  .menu {
+    justify-content: center;
+    padding-top: 180px;
+  }
+  .welcome {
+    background-image: url("../img/banner-mobile.jpg");
+    height: 640px;
+  }
+  .welcome-title {
+    font-size: 26px;
+    padding: 26px 0;
+  }
+  .header-logo {
+    width: 260px;
+  }
+  .hamburger {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  .hamburger div {
+    width: 24px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 2px;
+  }  
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+  nav {
+    display: none;
+  }
+  .welcome-title {
+    font-size: 38px;
+  }
+  .hamburger {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  .hamburger div {
+    width: 24px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 2px;
+  }    
+  .menu {
+    margin-top: -40px;
+    padding-top: 0;
+  }
+}
+
+
 /************* trands **************/
 
 .trands-head, .offers-head {
@@ -133,7 +206,8 @@ body {
 }
 .trands {
   display: flex;
-  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .trand {
   background-repeat: no-repeat;
@@ -142,11 +216,12 @@ body {
   background-color: #000;
   position: relative;
   height: 320px;
-  width: 25%;
+  width: 24.8%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   z-index: 0;
+  margin-top: 4px;
 }
 .trand:after {
   content: "";
@@ -199,19 +274,33 @@ ul.trand-tags {
   text-decoration: none; 
 }
 
+
+@media (max-width: 767px) {
+  .trand {
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+  .trand {
+    width: calc(100% / 2 - 4px / 2);
+  }
+}
+
+
 /*************  offers **************/
 
 .offers {
   display: flex;
-  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .offer {
   position: relative;
-  min-height: 320px;
-  width: 33.33%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  margin-top: 30px;
 }
 .offer-img {
   text-align: center;  
@@ -267,6 +356,22 @@ ul.trand-tags {
 }
 
 
+
+@media (max-width: 767px) {
+  .offer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+  .offer {
+    width: 48%;
+  }
+}
+
+
+
+
 /*************  left side **************/
 
 main {
@@ -284,20 +389,22 @@ margin-top: 64px;
   margin-bottom: 64px;
   display: flex;
   flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .article-img {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  width: 50%;
 }
 .article-img img {
-  width: 380px;
+  max-width: 390px;
+  width: 100%;
 }
 .article-content {
-  margin-left: 30px;
-  position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  width: 47%;
   vertical-align: top;
-  text-align: left;
 }
 
 .article-content-type {
@@ -344,6 +451,49 @@ margin-top: 64px;
   font-size: 15px;
   margin-top: 48px;
 }
+
+
+
+@media (max-width: 767px) {
+  main {
+    width: 100%;
+    margin-right: 0;
+  }
+  .article {
+    margin-bottom: 24px;
+    border-bottom: 4px solid #eee;
+  }
+  .article-img, .article-content {
+    width: 100%;
+  }
+  .article-content {
+    margin-top: 16px;
+  }
+  .article-content-date {
+    margin-top: 0;
+  }
+  .article-content-text {
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  main {
+    width: calc(100% - 272px);
+    margin-right: 0;
+  }
+  .article-img, .article-content {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  main {
+    width: calc(100% - 330px);
+    margin-right: 58px;
+  }
+}
+
 
 /*************  right side **************/
 
@@ -540,6 +690,20 @@ aside {
   vertical-align: super;
 }
 
+
+@media (max-width: 767px) {
+  aside {
+    width: 100%;
+    margin-top: 0;
+  }
+  .post-search-field {
+    width: calc(100% - 48px);
+  }
+  .subscribe-form, .tags-form, .themes-form {
+    margin-top: 40px;
+  }
+}
+
 /*************  footer **************/
 
 .footer {
@@ -593,4 +757,88 @@ aside {
   font-weight: 600;
   margin-top: 74px;
   margin-bottom: 40px;
+}
+
+
+
+@media (max-width: 767px) {
+  .network {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+}
+  .networks li {
+    margin: 24px 12px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+  .networks li {
+    margin: 24px 18px;
+  }
+}
+
+/*************  overlay popup **************/
+
+.overlay {
+  display: none;
+  position: absolute;
+  background-color: #0000004d;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  width: 380px;
+  height: 640px;
+  background-color: #fff;
+  position: relative;
+}
+
+.popup-head {
+  color: #0f0d0e;
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;  
+}
+.popup-head::after {
+  content: "";
+  width: 64px;
+  height: 3px;
+  background-color: #e1d9bd;
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 34px;
+  margin: auto;
+}
+
+
+.popup-x {
+  position: absolute;
+  color: #fff;
+  top: -40px;
+  right: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+
+@media (max-width: 767px) {
+  .popup {
+    width: 320px;
+  }
 }
