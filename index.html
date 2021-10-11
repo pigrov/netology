@@ -8,10 +8,23 @@
 </head>
 
 <body translate="no" class="vsc-initialized">
-    <div class="overlay">
+    <div class="overlay active" id="overlay">
         <div class="popup">
-            <div class="popup-x">X</div>
+            <div class="popup-x" onclick="document.getElementById('overlay').classList.remove('active')">✖</div>
             <h2 class="popup-head">Ваш фидбек</h2>
+            <form method="post" class="popup-form" action="">
+                <div class="popup-form-question">Как часто вы заходите на сайт?</div>
+                <select class="popup-form-frequency" name="frequency">
+                    <option value="1" selected>Почти каждый день
+                    <option value="2">Пару раз в год
+                </select>
+                <div class="popup-form-question">Вы подписаны на e-mail рассылку?</div>
+                <input type="radio" name="question" class="popup-form-subscription" value="1" checked> Да
+                <input type="radio" name="question" class="popup-form-subscription" value="2"> Нет
+                <div class="popup-form-question">Расскажите какой контент вы хотели бы видеть на нашем сайте?</div>
+                <textarea name="textarea" class="popup-form-textarea" >Такой контент мы хотели бы видеть</textarea>
+                <input class="popup-form-submit" type="submit" value="ОТПРАВИТЬ">
+              </form>
         </div>
     </div>
     <header class="welcome">
