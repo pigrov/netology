@@ -10,18 +10,18 @@
 <body translate="no" class="vsc-initialized">
     <div class="overlay active" id="overlay">
         <div class="popup">
-            <div class="popup-x" onclick="document.getElementById('overlay').classList.remove('active')">✖</div>
+            <div class="popup-x" onclick="document.getElementById('overlay').classList.remove('active')"></div>
             <h2 class="popup-head">Ваш фидбек</h2>
             <form method="post" class="popup-form" action="">
-                <div class="popup-form-question">Как часто вы заходите на сайт?</div>
+                <label class="popup-form-question">Как часто вы заходите на сайт?</label>
                 <select class="popup-form-frequency" name="frequency">
                     <option value="1" selected>Почти каждый день
                     <option value="2">Пару раз в год
                 </select>
-                <div class="popup-form-question">Вы подписаны на e-mail рассылку?</div>
+                <label class="popup-form-question">Вы подписаны на e-mail рассылку?</label>
                 <input type="radio" name="question" class="popup-form-subscription" value="1" checked> Да
                 <input type="radio" name="question" class="popup-form-subscription" value="2"> Нет
-                <div class="popup-form-question">Расскажите какой контент вы хотели бы видеть на нашем сайте?</div>
+                <label class="popup-form-question">Расскажите какой контент вы хотели бы видеть на нашем сайте?</label>
                 <textarea name="textarea" class="popup-form-textarea" >Такой контент мы хотели бы видеть</textarea>
                 <input class="popup-form-submit" type="submit" value="ОТПРАВИТЬ">
               </form>
@@ -69,49 +69,49 @@
             <div class="trand">
                 <div class="trand-box">
                     <ul class="trand-tags">
-                        <li><a href="#0" class="trand-tag">Fashion</a></li>
-                        <li><a href="#0" class="trand-tag">MuSiC</a></li>
+                        <li class="trand-tags-li"><a href="#0" class="trand-tag">Fashion</a></li>
+                        <li class="trand-tags-li"><a href="#0" class="trand-tag">MuSiC</a></li>
                     </ul> 
                     <h3 class="trand-theme">
-                        Сейчас в тренде: сад на подоконнике
+                        <a href="#">Сейчас в тренде: сад на подоконнике</a>
                     </h3>
                 </div>
             </div>
             <div class="trand">
                 <div class="trand-box">
                     <ul class="trand-tags">
-                        <li><a href="#0" class="trand-tag">Food</a></li>
+                        <li class="trand-tags-li"><a href="#0" class="trand-tag">Food</a></li>
                     </ul> 
                     <h3 class="trand-theme">
-                        сыры на красивых картинках из интернета: какие они на вкус?
+                        <a href="#">сыры на красивых картинках из интернета: какие они на вкус?</a>
                     </h3>
                 </div>
             </div>
             <div class="trand">
                 <div class="trand-box">
                     <ul class="trand-tags">
-                        <li><a href="#0" class="trand-tag">Lifestyle</a></li>
-                        <li><a href="#0" class="trand-tag">Travel</a></li>
+                        <li class="trand-tags-li"><a href="#0" class="trand-tag">Lifestyle</a></li>
+                        <li class="trand-tags-li"><a href="#0" class="trand-tag">Travel</a></li>
                     </ul> 
                     <h3 class="trand-theme">
-                        СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ
+                        <a href="#">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</a>
                     </h3>
                 </div>
             </div>
             <div class="trand">
                 <div class="trand-box">
                     <ul class="trand-tags">
-                        <li><a href="#0" class="trand-tag">food</a></li>
-                        <li><a href="#0" class="trand-tag">Health</a></li>
+                        <li class="trand-tags-li"><a href="#0" class="trand-tag">food</a></li>
+                        <li class="trand-tags-li"><a href="#0" class="trand-tag">Health</a></li>
                     </ul> 
                     <h3 class="trand-theme">
-                        Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?
+                        <a href="#">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</a>
                     </h3>
                 </div>
             </div>
         </div>
         <div class="container">
-            <main>
+            <main class="main">
                 <div class="articles">
                     <div class="article">
                         <div class="article-img">
@@ -224,7 +224,7 @@
                     </div>
                 </div>
             </main>
-            <aside>
+            <aside class="aside">
                 <h2 class="post-head">Новые посты</h2>
                 <div class="posts">
                     <div class="post">
@@ -285,8 +285,8 @@
         </div> -->
 
                 <form class="post-search-form">
-                    <input legend="Поле ввода для поиска" id="post-search-field" class="post-search-field" placeholder="Найти...">
-                    <button legend="Кнопка найти" id="post-search-btn" class="post-search-btn"></button>
+                    <input legend="Поле ввода для поиска" aria-label="Поле ввода для поиска" id="post-search-field" class="post-search-field" placeholder="Найти...">
+                    <button legend="Кнопка найти" aria-label="Кнопка найти" id="post-search-btn" class="post-search-btn"></button>
                 </form>
 
                 <!--       <div class="subscribe-form">
@@ -305,25 +305,25 @@
                 <div class="tags-form">
                     <div class="post-head">Теги</div>
                     <ul class="tags">
-                        <li><a href="#0" class="tag">Fashion</a></li>
-                        <li><a href="#0" class="tag">MuSiC</a></li>
-                        <li><a href="#0" class="tag">Lifestyle</a></li>
-                        <li><a href="#0" class="tag">Art</a></li>
-                        <li><a href="#0" class="tag">Interior</a></li>
-                        <li><a href="#0" class="tag">Travel</a></li>
-                        <li><a href="#0" class="tag">Food</a></li>
-                        <li><a href="#0" class="tag">Health</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">Fashion</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">MuSiC</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">Lifestyle</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">Art</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">Interior</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">Travel</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">Food</a></li>
+                        <li class="tags-li"><a href="#0" class="tag">Health</a></li>
                     </ul>
                 </div>
 
                 <div class="themes-form">
                     <div class="post-head">Темы</div>
                     <ul class="themes">
-                        <li><a href="#0" class="theme">Fashion</a><span>7</span></li>
-                        <li><a href="#0" class="theme">Music</a><span>12</span></li>
-                        <li><a href="#0" class="theme">Lifestyle</a><span>27</span></li>
-                        <li><a href="#0" class="theme">Art</a><span>3</span></li>
-                        <li><a href="#0" class="theme">Interior</a><span>33</span></li>
+                        <li><a href="#0" class="theme">Fashion</a><span class="themes-count">7</span></li>
+                        <li><a href="#0" class="theme">Music</a><span class="themes-count">12</span></li>
+                        <li><a href="#0" class="theme">Lifestyle</a><span class="themes-count">27</span></li>
+                        <li><a href="#0" class="theme">Art</a><span class="themes-count">3</span></li>
+                        <li><a href="#0" class="theme">Interior</a><span class="themes-count">33</span></li>
                     </ul>
                 </div>
 
@@ -421,11 +421,11 @@
     <footer class="footer">
         <div class="container">
             <ul class="networks">
-                <li><a href="#0" class="network tw" title="Твиттер"></a></li>
-                <li><a href="#0" class="network pt" title="Пинтерест"></a></li>
-                <li><a href="#0" class="network fb" title="Фейсбук"></a></li>
-                <li><a href="#0" class="network in" title="Инстаграм"></a></li>
-                <li><a href="#0" class="network tm" title="Тумблер"></a></li>
+                <li class="networks-icon"><a href="#0" class="network tw" title="Твиттер"></a></li>
+                <li class="networks-icon"><a href="#0" class="network pt" title="Пинтерест"></a></li>
+                <li class="networks-icon"><a href="#0" class="network fb" title="Фейсбук"></a></li>
+                <li class="networks-icon"><a href="#0" class="network in" title="Инстаграм"></a></li>
+                <li class="networks-icon"><a href="#0" class="network tm" title="Тумблер"></a></li>
             </ul>
             <div class="copyright">Copyright © 2009–2019 City Blog LLC.</div>
         </div>
