@@ -111,6 +111,9 @@ body {
   font-weight: 400;
   color: #fff;
 }
+.menu-link:hover {
+  text-decoration: underline;
+}
 
 .wrapper {
   display: block;
@@ -795,7 +798,7 @@ ul.trand-tags {
 
 .overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #0000004d;
   top: 0;
   bottom: 0;
@@ -862,7 +865,9 @@ ul.trand-tags {
   cursor: pointer;
   background-size: 24px;
   display: inline-block;
+  background: none;  
   background-image: url(../svg/form-x.svg);
+  border: none;
 }
 
 .popup-form {
@@ -902,7 +907,9 @@ ul.trand-tags {
   padding: 15px;
   font-weight: 600;
 }
-
+.screen-hidden {
+  font-size: 0;
+}
 
 
 @media (max-width: 767px) {

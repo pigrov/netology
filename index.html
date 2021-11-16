@@ -10,7 +10,7 @@
 <body translate="no" class="vsc-initialized">
     <div class="overlay active" id="overlay">
         <div class="popup">
-            <div class="popup-x" onclick="document.getElementById('overlay').classList.remove('active')"></div>
+            <button class="popup-x" onclick="document.getElementById('overlay').classList.remove('active')"></button>
             <h2 class="popup-head">Ваш фидбек</h2>
             <form method="post" class="popup-form" action="">
                 <label class="popup-form-question">Как часто вы заходите на сайт?</label>
@@ -130,8 +130,8 @@
                                 <time>10 июня 2019</time><span>Неизвестный автор</span>
                             </div>
                             <div class="article-content-text">
-                                Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел,
-                                запущены фонтаны города… Музеи еще закрыты. Что посмотреть?
+                                <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел,
+                                запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
                             </div>
                         </div>
                     </div>
@@ -152,8 +152,8 @@
                                 <time>10 июня 2019</time><span>Неизвестный автор</span>
                             </div>
                             <div class="article-content-text">
-                                Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что
-                                можно найти в шкафу.
+                                <p>Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что
+                                можно найти в шкафу.</p>
                             </div>
                         </div>
                     </div>
@@ -173,8 +173,8 @@
                                 <time>10 июня 2019</time><span>Неизвестный автор</span>
                             </div>
                             <div class="article-content-text">
-                                Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою
-                                палатку? <br><br> Мы составили список лучших летних фестивалей по всему миру.
+                                <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p> 
+                                <p>Мы составили список лучших летних фестивалей по всему миру.</p>
                             </div>
                         </div>
                     </div>
@@ -195,8 +195,8 @@
                                 <time>10 июня 2019</time><span>Неизвестный автор</span>
                             </div>
                             <div class="article-content-text">
-                                Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию
-                                и микробиологию еды.
+                                <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию
+                                и микробиологию еды.</p>
                             </div>
                         </div>
                     </div>
@@ -217,8 +217,8 @@
                                 <time>10 июня 2019</time><span>Неизвестный автор</span>
                             </div>
                             <div class="article-content-text">
-                                Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию
-                                и микробиологию еды.
+                                <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию
+                                и микробиологию еды.</p>
                             </div>
                         </div>
                     </div>
@@ -286,7 +286,7 @@
 
                 <form class="post-search-form">
                     <input legend="Поле ввода для поиска" aria-label="Поле ввода для поиска" id="post-search-field" class="post-search-field" placeholder="Найти...">
-                    <button legend="Кнопка найти" aria-label="Кнопка найти" id="post-search-btn" class="post-search-btn"></button>
+                    <button legend="Кнопка найти" aria-label="Кнопка найти" id="post-search-btn" class="post-search-btn"><span class="screen-hidden">Кнопка найти</span></button>
                 </form>
 
                 <!--       <div class="subscribe-form">
